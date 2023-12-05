@@ -1,0 +1,8 @@
+services:
+  whisper-cpp-python:
+    build: .
+    restart: always
+    network_mode: "host"
+    volumes:
+      - ${WHISPER_CPP_PYTHON_MODEL_PATH}:/data/model.bin
+    
